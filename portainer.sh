@@ -1,9 +1,10 @@
 #!/bin/bash
+domain=$1
 yum install jq net-tools -y
 hostname=`hostname` #获取主机域名
 ip=`ifconfig eth0 | grep "inet" | awk '{ print $2}' | sed -n '1p;1q'` #获取主机IP地扯
-host=https://portainer.xxx.com/api #portainer地扯
-token=`curl -l -H "Content-type: application/json" -X POST -d '{"username":"admin","password":"123"}' $host/auth | jq ".jwt"`
+host=https://$domain/api #portainer地扯
+token=`curl -l -H "Content-type: application/json" -X POST -d '{"username":"admin","password":"xxxPassword"}' $host/auth | jq ".jwt"`
 token=${token:1}
 token=${token%?}
 data={\"Name\":\"222\",\"URL\":\"tcp://$hostname:2376\",\"PublicURL\":\"$ip\",\"TLS\":true}
