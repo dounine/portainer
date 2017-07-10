@@ -17,7 +17,7 @@ cp -rf ../tls/pem/* .
 ```
 替换`portainer`密码
 ```
-sed -i "s/xxxPassword/密码" portainer.sh
+sed -i "s/xxxPassword/密码/g" portainer.sh
 ```
 往`portainer`添加endpoint
 ```
