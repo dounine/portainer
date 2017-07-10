@@ -1,4 +1,5 @@
 #!/bin/bash
+yum install jq net-tools -y
 hostname=`hostname` #获取主机域名
 ip=`ifconfig eth0 | grep "inet" | awk '{ print $2}' | sed -n '1p;1q'` #获取主机IP地扯
 host=https://portainer.xxx.com/api #portainer地扯
