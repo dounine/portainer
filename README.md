@@ -21,6 +21,6 @@ sed -i "s/xxxPassword/密码" portainer.sh
 ```
 往`portainer`添加endpoint
 ```
-./portainer.sh www.demo.com
+./portainer.sh portainer.demo.com
 ```
 
