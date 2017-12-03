@@ -1,0 +1,1 @@
+sed -i "s/ExecStart=\/usr\/bin\/dockerd/ExecStart=\/usr\/bin\/dockerd --tlsverify --tlscacert=\/root\/tls\/pem\/ca.pem --tlscert=\/root\/tls\/pem\/server-cert.pem --tlskey=\/root\/tls\/pem\/server-key.pem -H tcp:\/\/0.0.0.0:2376 -H unix:\/\/\/var\/run\/docker.sock/g" /lib/systemd/system/docker.service
