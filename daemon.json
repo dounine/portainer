@@ -3,5 +3,6 @@
     "tlsverify":true,
     "tlscacert":"/root/tls/pem/ca.pem",
     "tlscert":"/root/tls/pem/server-cert.pem",
-    "tlskey":"/root/tls/pem/server-key.pem"
+    "tlskey":"/root/tls/pem/server-key.pem",
+    "registry-mirrors": ["https://cncedwx2.mirror.aliyuncs.com"]
 }
