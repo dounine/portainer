@@ -1,7 +1,8 @@
 #!/bin/bash
 # 依赖tls
 domain=$1
-yum install jq net-tools -y
+yum install jq net-tools fish -y
+echo "fish" >> /root/.bash_profile
 #hostname=`ifconfig eth0 | grep "inet" | awk '{ print $2}' | sed -n '1p;1q'` #获取主机域名
 hostname=`hostname` #获取主机域名
 ip=`ifconfig eth0 | grep "inet" | awk '{ print $2}' | sed -n '1p;1q'` #获取主机IP地扯
